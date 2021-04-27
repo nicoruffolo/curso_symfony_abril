@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bienvenidos!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+   
+</div>
+  {% for i in arreglo %}
+       <div> 
+             <td>{{ i |upper }}</td>
+       </div> 
+    {% endfor %}
+    {% if arreglo[1] == "titulo" %}
+        <div >  
+            <strong> Si,el arreglo en la posicion 1 se llama titulo!!</strong>
+        </div>    
+{% endif %}
+{% endblock %}
