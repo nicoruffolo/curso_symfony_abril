@@ -5,17 +5,18 @@
 {% block body %}
 <div>
   {% if  mensaje is defined  %}
-    {{mensaje }}
+    <h2> {{mensaje }} </h2>
   {% endif %}
+   <h2> Bievenidos al curso de Symfony! </h2>
   <form action="{{"validate_login"}}" method="post">
        
-        Mail:<input maxlength="35" size="25" name="email" />
+        Mail:<input maxlength="35" size="25" name="email" required="" placeholder="ejemplo@ejemplo.com"/>
        
-        Contraseña:<input type="password" maxlength="25" size="25" name="password" />
+        Contraseña:<input type="password" maxlength="25" size="25" name="password" required=""/>
         <br />
         
         <br />
-        <input type="submit" value="Registrar" />
+        <input type="submit" value="Enviar" />
 </form>
 </div>
 {% endblock %}
