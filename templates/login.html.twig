@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bienvenidos!{% endblock %}
+
+{% block body %}
+<div>
+  {% if  mensaje is defined  %}
+    {{mensaje }}
+  {% endif %}
+  <form action="{{"validate_login"}}" method="post">
+       
+        Mail:<input maxlength="35" size="25" name="email" />
+       
+        Contraseña:<input type="password" maxlength="25" size="25" name="password" />
+        <br />
+        
+        <br />
+        <input type="submit" value="Registrar" />
+</form>
+</div>
+{% endblock %}

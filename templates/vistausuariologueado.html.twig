@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bienvenidos!{% endblock %}
+
+{% block body %}
+<a href="{{ path('home') }}">Volver al inicio</a>
+<div>
+     <h1> Bienvenido!!! {{email}} </h1>
+</div>
+{% endblock %}
